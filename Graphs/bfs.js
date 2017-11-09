@@ -1,4 +1,4 @@
-// BREADTH FIRST SEARCH
+// BREADTH FIRST SEARCH / BREADTH FIRST TRAVERSAL
 
 
 let BFSearch = (tree, value) => {
@@ -17,6 +17,24 @@ let BFSearch = (tree, value) => {
   }
   return null;
 }
+
+
+let BFTraversal = (tree) => {
+  let queue = [tree];
+  let values = [];
+  while (queue.length > 0) {
+    let tempNode = queue.shift();
+    values.push(tempNode.value);
+    if (tempNode.left) {
+      queue.push(tempNode.left);
+    }
+    if (tempNode.right) {
+      queue.push(tempNode.right);
+    }
+  }
+  return values;
+}
+
 
 let t = {
     "value": 4,
@@ -56,4 +74,6 @@ let t = {
     }
 }
 
-console.log(BFSearch(t, -3));
+console.log(BFSearch(t, -3))
+
+console.log(BFTraversal(t))
