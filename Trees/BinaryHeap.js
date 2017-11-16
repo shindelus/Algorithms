@@ -33,7 +33,6 @@ class BinaryMinHeap {
       index = parentIndex;
       parentIndex = Math.floor((index - 1)/2);
     }
-    console.log(this.heap);
   }
 
   removeRoot() {
@@ -65,3 +64,12 @@ console.log(heap[0] < heap[1]);
 console.log(heap[0] < heap[2]);
 console.log(heap[1] < heap[3]);
 console.log(heap[1] < heap[4]);
+
+binaryMinHeap.insert(3);
+
+let heap2 = binaryMinHeap.getHeap();
+console.log(heap2);
+console.log(heap2[0] < heap2[1]);
+console.log(heap2[0] < heap2[2]);
+console.log(heap2[1] < heap2[3]);
+console.log(heap2[1] < heap2[4]);
