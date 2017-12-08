@@ -77,3 +77,30 @@ let t = {
 console.log(BFSearch(t, -3))
 
 console.log(BFTraversal(t))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
